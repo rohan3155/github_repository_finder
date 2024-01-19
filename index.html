@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Repositories Finder</title>
+    <!-- Linking external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Including Font Awesome Kit for icons -->
+    <script src="https://kit.fontawesome.com/ca9585f36a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Main container for the page -->
+    <div class="container">
+        <!-- Search container with input, button, and per-page filter -->
+        <div class="searchContainer">
+            <input type="search" class="searchBar" placeholder="Search user..." id="searchInput">
+            <div id="searchHistoryContainer"></div>
+            <button class="searchBtn" id="searchBtn">Search</button>
+            <div class="perPageFilter">
+                <label for="perPageSelect">Repositories Per Page:</label>
+                <!-- Dropdown for selecting repositories per page -->
+                <select id="perPageSelect">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Header section with user profile details -->
+        <div class="header">
+            <div class="headerContainer">
+                <!-- User profile image -->
+                <img class="profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt=""  >
+                <div class="profileDetail">
+                    <!-- User details -->
+                    <h1>JohnDoe</h1>
+                    <h4>Bio goes here</h4>
+                    <h4 class="location"><i class="fas fa-location-dot"></i>Orlando</h4>
+                    <h4 class="url">Social: <a href="https://twitter.com/johndoefromx?lang=en">https://twitter.com/johndoefromx?lang=en</a></h4>
+                </div>
+            </div>
+            <!-- Additional URL link -->
+            <div>
+                <h5 class="urls"><i class="fas fa-link"></i> <a class="urls" href="https://twitter.com/johndoefromx?lang=en">https://twitter.com/johndoefromx?lang=en</a></h5>
+            </div>
+        </div>
+        
+        <!-- Content section with user cards -->
+        <div class="content">
+            <!-- User card with name, description, and buttons -->
+            <div class="card">
+                <h2 class="name">hey</h2>
+                <h5 class="description">hey</h5>
+                <button class="btn">Javascript</button>
+                <button class="btn">Javascript</button>
+            </div>
+            <!-- Repeat similar cards for other items -->
+        </div>
+        
+        <!-- Footer section with pagination and time buttons -->
+        <div class="footer">
+            <!-- Container for pagination buttons -->
+            <div class="btnContainer" id="paginationContainer">
+                <!-- Pagination buttons (commented out) -->
+            </div>
+            <!-- Container for time-based navigation buttons -->
+            <div class="timeBtnContainer">
+                <button class="older"><i class="fas fa-arrow-left"></i> older</button>
+                <button class="newer">newer <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Including the JavaScript file for functionality -->
+    <script src="./index.js"></script>
+</body>
+</html>

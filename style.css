@@ -1,0 +1,270 @@
+/* Add the following CSS to your style.css file */
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the container */
+.container {
+    margin: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000;
+}
+
+.header {
+    padding: 20px 40px;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 80px;
+}
+
+.searchContainer {
+    display: flex;
+    gap: 10px;
+    margin: 8px;
+    justify-content: center;
+}
+
+.searchBar {
+    padding: 8px;
+    border: 1px solid #727373;
+    border-radius: 4px;
+    width: 40%;
+    border-radius: 8px;
+}
+
+.searchBtn {
+    background: #3b87ca;
+    border: #727373;
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Add this CSS to your style.css file */
+#searchHistoryContainer {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#searchHistoryContainer div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#searchHistoryContainer div:hover {
+    background-color: #f2f2f2;
+}
+
+
+.perPageFilter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px;
+}
+
+.perPageFilter label {
+    font-size: 14px;
+}
+
+.perPageFilter select {
+    padding: 8px;
+    border: 1px solid #727373;
+    border-radius: 4px;
+}
+
+.profile {
+    width: 200px;
+    height: 200px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #727373;
+    padding: 4px;
+    border-radius: 99px;
+}
+
+.profileDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.location {
+    display: flex;
+    gap: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #252525;
+}
+
+.url {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 40px;
+    margin: 20px 20px;
+}
+
+.card {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000;
+    padding: 10px 10px;
+    border-radius: 4px;
+}
+
+.btn {
+    background: #3b87ca;
+    border: #727373;
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.timeBtnContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style for buttons */
+.prev,
+.pagination,
+.next,
+.older,
+.newer {
+    background: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d1cfce;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #3b87ca;
+    cursor: pointer;
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+
+    /* Styles for screens up to 768px wide */
+    .headerContainer,
+    .searchContainer,
+    .perPageFilter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headerContainer {
+        gap: 10px;
+    }
+
+    .urls {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        gap: 4px;
+    }
+
+    .searchBar {
+        width: 100%;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin: 0 0;
+    }
+
+    .card {
+        border-width: 2px;
+        border-style: solid;
+        border-color: #000;
+        /* padding: 5px 5px; */
+        width: 180px;
+        /* background: #000; */
+        border-radius: 4px;
+    }
+
+    .searchBtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btnContainer,
+    .timeBtnContainer {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    .prev,
+    .pagination,
+    .next,
+    .older,
+    .newer {
+        width: 80px;
+        margin-top: 10px;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+}
